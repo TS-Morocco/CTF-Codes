@@ -3,7 +3,6 @@
 import sys
 from factordb.factordb import FactorDB
 from Crypto.Util.number import inverse
-#
 
 def get_p_q(n):
     f = FactorDB(n)
@@ -19,13 +18,16 @@ def get_t(p,q):
 
 def message(c,d,n):
     m = pow(c,d,n)
+
+    # Cause some CTFs might need the undecoded RSA 
+
     result = f"""
-result without Dcodeing : 
+result without Decoding : 
 
 {m}
 
 
-result with Decodeing :
+result with Decoding :
 
 
 {bytes.fromhex(hex(m)[2:])}
@@ -63,7 +65,7 @@ def Solver(data):
 
 
 def get_data():
-    # get the data from file ( n , d, c, ...)
+    # get the data from file ( n , d, c, e, p , q )
     if len(sys.argv) == 2:
         with open(sys.argv[1]) as f :   
             lines = f.read().splitlines()
@@ -105,14 +107,5 @@ File example :
 """)
 
 if __name__ == "__main__":
-
     data = get_data()
-    #data = {
-    #    "e":3,
-    #    "c":219878849218803628752496734037301843801487889344508611639028,
-    #    "n":245841236512478852752909734912575581815967630033049838269083
-    #}
-
     print (Solver(data))
-    
-    
