@@ -19,7 +19,19 @@ def get_t(p,q):
 
 def message(c,d,n):
     m = pow(c,d,n)
-    return bytes.fromhex(hex(m)[2:])
+    result = f"""
+result without Dcodeing : 
+
+{m}
+
+
+result with Decodeing :
+
+
+{bytes.fromhex(hex(m)[2:])}
+
+    """
+    return result
 
 
 def Solver(data):
@@ -27,12 +39,14 @@ def Solver(data):
     e = data["e"] 
     n = data["n"] 
 
-    if "p" and "q" not in data.keys():
+    if "d" not in data.keys():
         pq  = get_p_q(n)
         p = pq[0]
         q = pq[1]
-
-    return message(c,get_d(e,p,q),n)
+        return message(c,get_d(e,p,q),n)
+    else :
+        d = data["d"]
+        return message(c,d,n)
 
     #elif option == "t":
     #    return (1-p) * (1-q)
@@ -58,7 +72,7 @@ def get_data():
         # Turn the list to dict
         _dict = dict()
         for i in lines:
-            _dict[i.split("=")[0]] = int(i.split("=")[1])
+            _dict[i.split("=")[0]] = eval(i.split("=")[1])
 
         return _dict
     else:
@@ -99,7 +113,6 @@ if __name__ == "__main__":
     #    "n":245841236512478852752909734912575581815967630033049838269083
     #}
 
-    print (data)
     print (Solver(data))
     
     
