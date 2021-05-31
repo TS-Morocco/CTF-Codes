@@ -11,4 +11,4 @@ this repo contain
 1. and more ... 
 
 
-**we will update more configs in the future**
+**we will add more configs in the future**

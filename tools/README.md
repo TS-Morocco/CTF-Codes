@@ -6,4 +6,4 @@
 1. [sqlmap](sqlmap)
 1. and more ... 
 
-**we will update more cheat sheets in the future**
+**we will add more cheat sheets in the future**
