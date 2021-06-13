@@ -7,7 +7,7 @@ this repo contain
 1. [forensics](forensics)
 1. [reverse](rev)
 1. [misc](misc)
-1. [tools](tools)
+1. [Cheat sheets](cheat_sheets)
 1. and more ... 
 
 
