@@ -54,7 +54,38 @@ newmap = {
 }
 
 
-if len(sys.argv) != 2:
+#if len(sys.argv) != 2:
+
+
+try:
+    if ".txt" in sys.argv[1] :
+        mykeys = open(sys.argv[1])
+    else:
+        os.system(f"tshark -r ./{sys.argv[1]} -T fields -e usb.capdata| tr -d : > temp.txt")
+        mykeys = open("temp.txt")
+        os.system("rm temp.txt")
+        
+    message = ""
+    
+    for line in mykeys:
+        bytesArray = bytearray.fromhex(line.strip())
+        
+        for byte in bytesArray:
+            if byte != 0:
+                print (f"Debug Byte = {str(byte)}")
+                keyVal = int(byte)
+                if keyVal in newmap:
+                    print (newmap[keyVal])
+                    if bytesArray[0] == 2:
+                        message += newmap[keyVal].upper()
+                    else :
+                        message += newmap[keyVal]
+    
+                else:
+                    pass
+    
+    print (message)
+except:
     print (f"""
    _____     _  ____  _    _ _____ _____  _____
  |_   _|   | |/ __ \| |  | |_   _|  __ \|_   _|
@@ -78,35 +109,4 @@ if len(sys.argv) != 2:
    
 
     """)
-
-
-
-if ".txt" in sys.argv[1] :
-    mykeys = open(sys.argv[1])
-else:
-    os.system(f"tshark -r ./{sys.argv[1]} -T fields -e usb.capdata| tr -d : > temp.txt")
-    mykeys = open("temp.txt")
-    os.system("rm temp.txt")
-    
-message = ""
-
-for line in mykeys:
-    bytesArray = bytearray.fromhex(line.strip())
-    
-    for byte in bytesArray:
-        if byte != 0:
-            print (f"Debug Byte = {str(byte)}")
-            keyVal = int(byte)
-            if keyVal in newmap:
-                print (newmap[keyVal])
-                if bytesArray[0] == 2:
-                    message += newmap[keyVal].upper()
-                else :
-                    message += newmap[keyVal]
-
-            else:
-                pass
-
-print (message)
-                    
 
