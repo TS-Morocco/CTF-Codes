@@ -50,35 +50,25 @@ def Solver(data):
         d = data["d"]
         return message(c,d,n)
 
-    #elif option == "t":
-    #    return (1-p) * (1-q)
-    #        
-
-    #elif option == "n":
-    #    return q * p
-    #        
-    #elif option == "c":
-    #    return pow(m,e,n)
-
-    #elif option == "d":
-    #    return inverse(e,t)
-
 
 def get_data():
     # get the data from file ( n , d, c, e, p , q )
-    if len(sys.argv) == 2:
-        with open(sys.argv[1]) as f :   
-            lines = f.read().splitlines()
-        
-        
-        # Turn the list to dict
-        _dict = dict()
-        for i in lines:
-            _dict[i.split("=")[0]] = eval(i.split("=")[1])
+    with open(sys.argv[1]) as f :   
+        lines = f.read().splitlines()
+    
+    
+    # Turn the list to dict
+    _dict = dict()
+    for i in lines:
+        _dict[i.split("=")[0]] = eval(i.split("=")[1])
 
-        return _dict
-    else:
+    return _dict
 
+if __name__ == "__main__":
+    try:
+        data = get_data()
+        print (Solver(data))
+    except:
         print (f"""
 
   _____     _  ____  _    _ _____ _____  _____ 
@@ -105,7 +95,3 @@ File example :
                 n=245841236512478852752909734912575581815967630033049838269083
 
 """)
-
-if __name__ == "__main__":
-    data = get_data()
-    print (Solver(data))
