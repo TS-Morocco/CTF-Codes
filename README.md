@@ -1,4 +1,4 @@
-# Get the basic config for your CTFs configs 
+# example python scripts for ctf beginners, envoy! 
 
 this repo contain 
 
@@ -10,4 +10,4 @@ this repo contain
 1. and more ... 
 
 
-**we will update more configs in the future**
+**we will create more scripts in the future**
