@@ -1,6 +1,6 @@
 # example python scripts for ctf beginners, envoy! 
 
-this repo contains 
+this repo contains starting programs and tutorials for ctf challenges:
 
 1. [crypto](crypto)
 1. [web](web)
