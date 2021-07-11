@@ -1,6 +1,6 @@
 # example python scripts for ctf beginners, envoy! 
 
-this repo contain 
+this repo contains 
 
 1. [crypto](crypto)
 1. [web](web)
