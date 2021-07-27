@@ -1,5 +1,6 @@
 syntax on
 set mouse=a
+set clipboard=unnamedplus
 let g:neovide_cursor_vfx_mode = "railgun"
 set guifont=Delugia\ Nerd\ Font:h16
 set background=dark
