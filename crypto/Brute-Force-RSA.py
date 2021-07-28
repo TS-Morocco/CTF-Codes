@@ -6,7 +6,7 @@ def main():
     n = 28...
     encrypted_chars = [2876876...]
     for encrypted_char in encrypted_chars:
-        for char in string_printable:
+        for char in string.printable:
             if encrypted_char == pow(ord(char), e, n):
                 flag += char
     print(flag)
