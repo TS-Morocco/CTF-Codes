@@ -1,4 +1,5 @@
 #!/usr/bin/env python 3
+# To execute use : python3 bcrypt SaltHashBruteForce.py
 import bcrypt
 import base64
 
