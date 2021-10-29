@@ -8,7 +8,8 @@ This repo will contain starting programs and tutorials for beginner ctf challeng
 1. [misc](misc)
 
 Some honorable mentions :
-https://tryhackme.com
-https://hackthebox.eu
-https://ctftime.org
-https://picoctf.com
+TryHackMe :(https://tryhackme.com)
+HackTheBox:(https://hackthebox.eu)
+CtfTime :  (https://ctftime.org)
+PicoCtf :  (https://picoctf.com)
+<img src="https://tryhackme-badges.s3.amazonaws.com/SoufianeProton.png" alt="TryHackMe">
