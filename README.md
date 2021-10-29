@@ -12,6 +12,3 @@ TryHackMe :(https://tryhackme.com)
 HackTheBox:(https://hackthebox.eu)
 CtfTime :  (https://ctftime.org)
 PicoCtf :  (https://picoctf.com)
-<div>
-<image src="https://tryhackme.com/badge/371742"></script>
-</div>
