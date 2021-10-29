@@ -8,7 +8,7 @@ This repo will contain starting programs and tutorials for beginner ctf challeng
 1. [misc](misc)
 
 Some honorable mentions :
-TryHackMe :(https://tryhackme.com)
-HackTheBox:(https://hackthebox.eu)
-CtfTime :  (https://ctftime.org)
-PicoCtf :  (https://picoctf.com)
+- TryHackMe :(https://tryhackme.com)
+- HackTheBox:(https://hackthebox.eu)
+- CtfTime :  (https://ctftime.org)
+- PicoCtf :  (https://picoctf.com)
