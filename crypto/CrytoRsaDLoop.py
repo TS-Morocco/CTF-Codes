@@ -15,6 +15,6 @@ def main():
             if encrypted_char == pow(ord(char), e, n):
                 flag += char
     print(flag)
-    
+
 if __name__ == '__main__':
     main()    
