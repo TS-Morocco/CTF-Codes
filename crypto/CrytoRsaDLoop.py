@@ -7,7 +7,7 @@ def main():
     # Defining e n
     e = 65537
     n = 28...
-    # Defining Encrypted Message | Definition du message crypte`
+    # Defining Encrypted Message | De`finition du message crypte`
     encrypted_chars = [2876876...]
     # conditionnel double loop to print the flag
     for encrypted_char in encrypted_chars:
