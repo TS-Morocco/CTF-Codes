@@ -1,4 +1,4 @@
-# Python scripts for ctf beginners, envoy! 
+# Python scripts for beginners ctf, envoy! 
 
 This repo will contain starting programs and tutorials for beginner ctf challenges:
 1. [cryptography](crypto)
