@@ -1,6 +1,6 @@
 # Python scripts for beginners ctf, envoy! 
 
-This repo will contain starting programs and tutorials for beginner ctf challenges:
+This repo contains starting programs and tutorials for beginner ctf challenges:
 1. [cryptography](crypto)
 1. [web](web)
 1. [forensics](forensics)
